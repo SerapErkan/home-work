@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalStorageService } from '../libs';
 
 @Component({
   selector: 'layout-two',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutTwoComponent implements OnInit {
 
-  constructor() { }
+  bgcolor$:any;
+  
+  constructor(private local:LocalStorageService) {
+  // I-yol
+  // local.modeSubject.subscribe(data=>{
+  //  this.color=data;
+  // });
+  this.bgcolor$=local.modeDataSubjec;
+   }
+   ngOnInit(): void {
 
-  ngOnInit(): void {
-  }
-
+   }
 }

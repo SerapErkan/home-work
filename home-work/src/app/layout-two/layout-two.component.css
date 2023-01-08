@@ -4,6 +4,8 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    color: white;
+    font-size: large;
 }
 
 .flex-body-sideBar{
