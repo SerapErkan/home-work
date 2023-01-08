@@ -1,5 +1,6 @@
 import { createAction, props } from '@ngrx/store';
-import { FormModel} from 'src/libs';
+import { FormModel } from 'src/app/libs';
+
 
 export const setFormModel = createAction(
   '[Form] Set Form Model', //: Benzersiz key verdik. Bu action type/id olucak.

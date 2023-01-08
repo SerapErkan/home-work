@@ -1,0 +1,90 @@
+.row{
+display: flex;
+margin-top: 50px;
+justify-content:space-around
+
+}
+.col-3{
+    width:25%;
+}
+.col-9{
+  width: 60%;
+}
+
+.col-9 >h2{
+  background-color: blue;
+  color: white;
+}
+  
+.menu ul {
+    list-style-type: none;
+  }
+  
+  .menu li {
+    padding: 3px;
+    background-color:rgb(155, 90, 101);
+    color: #ffffff;
+    border: 1px solid gray;
+    box-shadow: 0 1px 3px rgba(63, 51, 51, 0.12), 0 1px 2px rgba(0, 0, 0, 0.123);
+  }
+  
+  .menu li:hover {
+    background-color: #0099cc;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: #0099cc;
+  
+  }
+
+.btn{
+  display: flex;
+  justify-content: center;
+ 
+} 
+.btn button{
+  padding: 15px;
+  width:50%;
+  margin-top: 10px;
+  border: none;
+  color: #cecece;
+  background-color:rgb(0, 0, 0) ;
+}
+
+
+.btn button:not(:last-child){
+margin-right: 10px;
+
+}
+.btn button:disabled,
+button[disabled]{
+  background-color: #666666;
+  color: #fdfdfd;
+}
+
+h4{
+  color: red;
+}
+h5{
+  color:rgb(40, 121, 214);
+}
+h6{
+  color: rgb(235, 235, 67);
+}
+
+
+ @media only screen and (max-width: 600px) {  
+.row .menu {
+display:none;
+}
+
+.col-9{
+padding: 20px;
+width:100%;
+}
+  } 

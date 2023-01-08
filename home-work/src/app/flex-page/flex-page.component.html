@@ -1,1 +1,79 @@
-<p>flex-page works!</p>
+
+<div class="row">
+  <div class="col-3 menu">
+    <ul>
+      <li [style.background-color]="color" (click)="selection('#666666')">MENU ITEM</li>
+      <li [style.background-color]="color"(click)="selection('#97ffff')">MENU ITEM</li>
+      <li [style.background-color]="color"(click)="selection('#8470ff')">MENU ITEM</li>
+      <li [style.background-color]="color"(click)="selection('#00ff7f')">MENU ITEM</li>
+      <li [style.background-color]="color"(click)="selection('#ff6a6a')">MENU ITEM</li>
+      <li [style.background-color]="color"(click)="selection('#ff4040')">MENU ITEM</li>
+      <li [style.background-color]="color"(click)="selection('#db7093')">MENU ITEM</li>
+      <li [style.background-color]="color"(click)="selection('#912cee')">MENU ITEM</li>
+      <li [style.background-color]="color"(click)="selection('#ffde66')">MENU ITEM</li>
+      <li [style.background-color]="color"(click)="selection('#000000')">MENU ITEM</li>
+      <li [style.background-color]="color"(click)="selection('#8b7765')">MENU ITEM</li>
+      <li [style.background-color]="color"(click)="selection('#0000cd')">MENU ITEM</li>
+
+    </ul>
+  </div>
+
+  <div class="col-9 center">
+    <h2>TITLE</h2>
+
+      <form   [formGroup]="Form">
+      <label for="fname">First Name</label> 
+      <h4 *ngIf="this.Form.get('fname')?.errors?.['required'] && this.Form.get('fname')?.touched">*zorunlu alan</h4>
+      <h5 *ngIf="this.Form.get('fname')?.errors?.['minlength']">*eksik karakter girdiniz</h5>
+      <input type="text" id="fname"  formControlName="fname" >
+
+      <label for="lname">Last Name</label>
+      <h4 *ngIf="this.Form.get('lname')?.errors?.['required'] && this.Form.get('lname')?.touched">*zorunlu alan</h4>
+      <h5 *ngIf="this.Form.get('lname')?.errors?.['minlength']">*eksik karakter girdiniz</h5>
+      <input type="text" id="lname"  formControlName="lname" >
+  
+
+      <label for="password">Password</label>
+      <h4 *ngIf="this.Form.get('password')?.errors?.['required'] && this.Form.get('password')?.touched">*zorunlu alan</h4>
+      <h5 *ngIf="this.Form.get('password')?.errors?.['minlength']">*eksik karakter girdiniz</h5>
+      <input type="text" id="password"  formControlName="password" >
+
+    
+      <label for="description">Description</label>    
+       <h4 *ngIf="this.Form.get('description')?.errors?.['required'] && this.Form.get('description')?.touched">*zorunlu alan</h4>
+       <h5 *ngIf="this.Form.get('description')?.errors?.['minlength']">*eksik karakter girdiniz</h5>
+      <input type="text" id="description"  formControlName="description" >
+ 
+      
+      <h6 *ngIf="this.Form.get('description')?.errors?.['maxlength']">
+        Description
+        {{this.Form.get('description')?.errors?.['maxlength']?.['actualLength']}}
+        karakter içermektedir,en çok
+        {{this.Form.get('description')?.errors?.['maxlength']?.['requiredLength']}}
+        karakter olmalı
+      </h6>
+
+      
+      <h6 *ngIf="this.Form.get('description')?.errors?.['minlength']">
+        Description
+        {{this.Form.get('description')?.errors?.['minlength']?.['actualLength']}}
+        karakter içermektedir,en az
+        {{this.Form.get('description')?.errors?.['minlength']?.['requiredLength']}}
+        karakter olmalı
+      </h6>
+
+      <div class="btn"> 
+      <button (click)="resetForm() "
+      [disabled]="this.Form.get('lname')?.errors?.['required'] 
+      && this.Form.get('fname')?.errors?.['required']
+      && this.Form.get('password')?.errors?.['required']
+      && this.Form.get('description')?.errors?.['required']
+      ">RESET BUTTON</button>
+
+      <button  type="submit" [style.background-color]="Form.valid?color:'#666666'"
+       [disabled]="Form.invalid" (click)="save()">SUBMIT BUTTON</button>
+    </div>
+
+
+     
+    </form>

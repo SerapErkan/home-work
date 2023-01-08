@@ -10,7 +10,12 @@ import { GridPageComponent } from './grid-page/grid-page.component';
 import { FlexPageComponent } from './flex-page/flex-page.component';
 import { LayoutOneComponent } from './layout-one/layout-one.component';
 import { LayoutTwoComponent } from './layout-two/layout-two.component';
-
+import { AppStoreState } from './store/app.state';
+import { appReducers } from './store/app.reducer';
+import { StoreModule } from '@ngrx/store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { LocalStorageService } from './libs';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +29,14 @@ import { LayoutTwoComponent } from './layout-two/layout-two.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    StoreModule.forRoot<AppStoreState>(appReducers),
+    StoreDevtoolsModule.instrument({
+    autoPause: false, 
+    }),
   ],
-  providers: [],
+  providers: [LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
