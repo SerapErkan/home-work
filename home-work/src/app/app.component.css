@@ -13,13 +13,14 @@
 .grid-container {
   display: grid;
   grid-template-areas: "header header header header header" "body body body body sideBar " "footer footer  footer footer footer ";
+  text-align: center;
 }
 
 .grid-item-header {
   grid-area: header;
   background-color: rgb(238, 231, 128);
   padding: 10px;
-  text-align: center;
+
 }
 .grid-item-body {
   grid-area: body;
@@ -29,7 +30,7 @@
 .grid-item-sideBar {
   grid-area: sideBar;
   background-color: cadetblue;
-  text-align: center;
+
 }
 .grid-item-footer {
   grid-area: footer;
@@ -99,3 +100,14 @@
    grid-area:1/2/3/4
    row-start/-column-start /row-end/column-end
 ---------------------------------------------------------------------------------------------*/
+
+/* responsive-grid */
+@media  screen and (max-width: 600px) {
+  .grid-item-sideBar{
+    display: none;
+  }
+  .grid-item-body {
+    grid-row: 2/3;
+    grid-column: 1/6;
+} }
+
