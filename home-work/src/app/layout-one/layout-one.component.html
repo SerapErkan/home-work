@@ -1,11 +1,25 @@
 <div class="grid-container">
-
-    <div class="grid-item-header"><app-header></app-header></div>
-    <div class="grid-item-body">
+  <!-- header -->
+  <div
+    *ngIf="bgcolor$ | async as bgcolor"
+    [style.background-color]="bgcolor"
+    class="grid-item-header"
+  >
+    <app-header></app-header>
+  </div>
+  <!-- body -->
+  <div class="grid-item-body">
     <app-grid-page></app-grid-page>
     <router-outlet></router-outlet>
-    </div>
-    <div class="grid-item-sideBar"><app-side-bar></app-side-bar></div>
-    <div class="grid-item-footer"><app-footer></app-footer></div>
-  
   </div>
+  <!-- side-bar -->
+  <div class="grid-item-sideBar"><app-side-bar></app-side-bar></div>
+  <!-- footer -->
+  <div
+    *ngIf="bgcolor$ | async as bgcolor"
+    [style.background-color]="bgcolor"
+    class="grid-item-footer"
+  >
+    <app-footer></app-footer>
+  </div>
+</div>
