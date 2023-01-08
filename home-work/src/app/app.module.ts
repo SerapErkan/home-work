@@ -8,6 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { GridPageComponent } from './grid-page/grid-page.component';
 import { FlexPageComponent } from './flex-page/flex-page.component';
+import { LayoutOneComponent } from './layout-one/layout-one.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FlexPageComponent } from './flex-page/flex-page.component';
     FooterComponent,
     SideBarComponent,
     GridPageComponent,
-    FlexPageComponent
+    FlexPageComponent,
+    LayoutOneComponent
   ],
   imports: [
     BrowserModule,
