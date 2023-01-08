@@ -9,6 +9,7 @@ import { SideBarComponent } from './side-bar/side-bar.component';
 import { GridPageComponent } from './grid-page/grid-page.component';
 import { FlexPageComponent } from './flex-page/flex-page.component';
 import { LayoutOneComponent } from './layout-one/layout-one.component';
+import { LayoutTwoComponent } from './layout-two/layout-two.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LayoutOneComponent } from './layout-one/layout-one.component';
     SideBarComponent,
     GridPageComponent,
     FlexPageComponent,
-    LayoutOneComponent
+    LayoutOneComponent,
+    LayoutTwoComponent
   ],
   imports: [
     BrowserModule,

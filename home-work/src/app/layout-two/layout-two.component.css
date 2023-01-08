@@ -1,0 +1,40 @@
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.flex-body-sideBar{
+ display: flex;
+ 
+}
+
+.flex-item-header{
+    background-color:rgb(238, 231, 128);
+  
+  
+}
+.flex-item-body{
+    background-color: pink;
+    min-height: 100vh;
+    width:75vw;
+}
+.flex-item-sideBar{
+    background-color: cadetblue;
+    width:25vw;
+    padding-top: 50vh;
+}
+.flex-item-footer{
+    background-color:green;
+}
+
+@media screen and (max-width:600px) {
+    .flex-item-sideBar{
+        display: none;
+    }
+    .flex-item-body{
+        width: 100%;
+    }
+}
