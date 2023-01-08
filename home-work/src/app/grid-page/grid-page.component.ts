@@ -52,7 +52,7 @@ export class GridPageComponent implements OnInit {
   this.store.dispatch(
   setFormModel({FormModel:this.Form.value})
   )
-  this.router.navigate(['twoPage']);
+  this.router.navigate(['data']);
   }
 
   resetForm(){
