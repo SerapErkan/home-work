@@ -85,7 +85,7 @@ display:none;
 }
 
 .col-9{
-padding: 20px;
-width:100%;
+  grid-column:1/4;
+
 }
   } 
