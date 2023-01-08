@@ -3,10 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { SideBarComponent } from './side-bar/side-bar.component';
+import { GridPageComponent } from './grid-page/grid-page.component';
+import { FlexPageComponent } from './flex-page/flex-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    SideBarComponent,
+    GridPageComponent,
+    FlexPageComponent
   ],
   imports: [
     BrowserModule,
